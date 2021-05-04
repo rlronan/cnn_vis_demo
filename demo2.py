@@ -38,8 +38,8 @@ conv layer #, 	 layer name, 	 layer index in model
 
 layer_nums = [2,6,8,12]#list(range(13))
 
-
 log_dir = pathlib.Path("./demo_model/")
+if not os.path.exists(log_dir): os.mkdir(log_dir)
 resizes = 10
 iterations = 250
 resize_factor = 1.2

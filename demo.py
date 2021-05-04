@@ -29,13 +29,15 @@ y_train = tf.convert_to_tensor(y_train, dtype=tf.float32)
 y_test = tf.convert_to_tensor(y_test, dtype=tf.float32)
 
 
-model_dir = './'
+log_dir = pathlib.Path("./logs/run1/")
+if not os.path.exists(log_dir.parent): os.mkdir(log_dir.parent)
+if not os.path.exists(log_dir): os.mkdir(log_dir)
 
 
-file_writer = tf.summary.create_file_writer("./logs/run1/")
+file_writer = tf.summary.create_file_writer(log_dir)
 file_writer.set_as_default()
 
-tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir="./logs/run1/", histogram_freq=1,
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1,
                                                       write_graph=False, write_images=False,
                                                       update_freq='epoch', profile_batch=0,
                                                       embeddings_freq=0, embeddings_metadata=None)
@@ -79,7 +81,7 @@ show_conv_layers(model=model)
 #%%
 
 feature_callback = log_conv_features_callback(
-            log_dir=pathlib.Path('./logs/run1/'),
+            log_dir=log_dir,
             update_freq='epoch',
             update_freq_val=1,
             layer_nums=[0,3],
