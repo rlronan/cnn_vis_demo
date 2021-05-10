@@ -44,7 +44,7 @@ Filters from Block 3, Conv 1.
 Filters from Block 3, Conv 4 and Conv 1.
 <p float="left">
   <img src="/sample_images/block3_conv4_27_entropy7.373313278392066.png" width="410" />
-  <img src="/sample_images/block4_conv1_23_entropy6.7876039289021435.png" width="484100" /> 
+  <img src="/sample_images/block4_conv1_23_entropy6.7876039289021435.png" width="410" /> 
 </p>
 
 ## Requirements:
