@@ -1,12 +1,13 @@
 # EasyVIZ Demo:
+A demonstration of two potential use cases for our EasyVIZ package.
+
+For the package implementation please see: ![EasyVIZ](https://github.com/rlronan/conv_vis)
+
 <p float="left">
   <img src="/sample_images/block3_conv3_filter_6.75103142.png" width="410" />
   <img src="/sample_images/block4_conv1_filter_6.645063669.png" width="410" /> 
 </p>
 
-A demonstration of two potential use cases for our EasyVIZ package.
-
-For the package implementation please see: ![EasyVIZ](https://github.com/rlronan/conv_vis)
 
 ## Use During Training
 demo.py showcases using our Tensorflow Callbacks to create and save our layer visualizations, maximum mean filter activation visualizations, and our 2D-Entropy calculations. It also demonstrates how users can display the visualizations during traing, save them to disk, or log them to Tensorboard. We've chosen a very small model and dataset for this demo, so results can be seen instantly. Given the size of the model and dataset, however, the results may not appear very impressive.
